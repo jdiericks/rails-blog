@@ -2,4 +2,9 @@
     <h2 class="text-center"><%= @post.title %></h2>
     <h5 class="text-center"><%= @post.created_at.strftime('%b %d, %Y') %></h5>
     <div><%= raw @post.body  %></div>
+    <div class="text-center">
+        <%= link_to "Home", root_url, :class => "btn btn-primary" %>
+        <%= link_to "EDIT POST", edit_post_url, :class => "btn btn-success" %>
+        <%= link_to "DELETE POST", post_path(@post), method: :delete,:class => "btn btn-warning" %>
+      </div>
 </div>
