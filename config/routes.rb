@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   
   mount Ckeditor::Engine => '/ckeditor'
-  root to: "posts#index"
+  root :to => "posts#index"
   
-  resource :posts
+  resource :posts, only: [:edit, :update, :show, :delete]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
