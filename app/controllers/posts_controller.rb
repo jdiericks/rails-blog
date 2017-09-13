@@ -13,7 +13,7 @@ class PostsController < ApplicationController
         @post = Post.new(post_params)
         if @post.save
             flash[:notice] = "Successfully created the post!"
-            redirect_to posts_path(@post)
+            redirect_to post_path(@post)
         else
             flash[:alert] = "There was an error creating the post!"
             render :new
